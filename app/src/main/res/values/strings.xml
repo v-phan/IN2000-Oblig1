@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">bavt_oblig1</string>
+    <string name="skriv_inn_en_tekst">Skriv inn en tekst</string>
+    <string name="sjekk_tekst">Sjekk tekst</string>
+</resources>
