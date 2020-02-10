@@ -3,7 +3,92 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".QuizActivity">
 
+    <TextView
+        android:id="@+id/questionView"
+        android:layout_width="348dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="109dp"
+        android:text="TextView"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="406dp"
+        android:layout_height="64dp"
+        android:onClick="nextActivity"
+        android:text="Palindrom checker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/inputFromPalindromeChecker"
+        android:layout_width="351dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="29dp"
+        android:text="TextView"
+        android:textColor="@color/textColor"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/fakta"
+        android:layout_width="141dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="234dp"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="Fakta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Fakta" />
+
+    <Button
+        android:id="@+id/fleip"
+        android:layout_width="142dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="234dp"
+        android:layout_marginEnd="35dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:text="Fleip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Fleip" />
+
+    <TextView
+        android:id="@+id/pointsView"
+        android:layout_width="351dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="133dp"
+        android:text="TextView"
+        android:textColor="@color/textColor"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="109dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="255dp"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,4 +3,11 @@
     <string name="skriv_inn_en_tekst">Skriv inn en tekst</string>
     <string name="sjekk_tekst">Sjekk tekst</string>
     <string name="next_activity">Next activity</string>
+    <string-array name = "Måleenheter">
+        <item>fluid ounce</item>
+        <item>cup</item>
+        <item>gallon</item>
+        <item>hogshead</item>
+    </string-array>
+
 </resources>

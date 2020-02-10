@@ -1,0 +1,4 @@
+true;Jorden er rund
+false;Vaksiner forårsaker autisme
+true;Den gjennomsnittlige penisstørrelsen i Asia er 5 cm
+true;Zip er egentlig en Zap. Zop er egentlig en Zip. Zop er derfor en Zap.

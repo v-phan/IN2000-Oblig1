@@ -1,10 +1,11 @@
 package com.example.bavt_oblig1
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
 
@@ -16,23 +17,32 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
+    var palindromtext: String = ""
+
     fun sendMessage(view: View) {
         val editText = findViewById<EditText>(R.id.editText)
         val textword = editText.text.toString()
         if(checkPalindrom(textword) == false){
             val message = textword + " er IKKE et palindrom "
             displayMessage(message)
+            palindromtext = textword
 
         }
         else{
             val message = textword + " er et palindrom "
             displayMessage(message)
-
+            palindromtext = textword
+        }
+        editText.setText("")
+        editText.clearFocus()
+        view?.let { v ->
+            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
+            imm?.hideSoftInputFromWindow(v.windowToken, 0)
         }
     }
 
     fun displayMessage(text: String){
-        val output: TextView = findViewById(R.id.textView_01)
+        val output: TextView = findViewById(R.id.inputFromPalindromeChecker)
         output.setText(text)
     }
 
@@ -59,11 +69,16 @@ class MainActivity : AppCompatActivity() {
 
 
     fun nextActivity(view: View) {
-        val message = "Welcome to the next activity";
-        val intent = Intent(this, ConverterActivity::class.java).apply {
-            putExtra(EXTRA_MESSAGE, message)
+
+        if(palindromtext.equals("")){
+            displayMessage("Du har ikke tastet inn og sendt et ord til sjekk for palindromini")
         }
-        startActivity(intent)
+        else{
+            val intent = Intent(this, ConverterActivity::class.java).apply {
+                putExtra("input",palindromtext)
+            }
+            startActivity(intent)
+        }
     }
 
 
